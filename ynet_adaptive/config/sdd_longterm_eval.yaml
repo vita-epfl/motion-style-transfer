@@ -1,0 +1,54 @@
+# train 
+save_every_n: 121
+resize_factor: 0.25  # resize factor
+viz_epoch: 10
+
+encoder_channels:  # list of kernels in encoder
+  - 32
+  - 32
+  - 64
+  - 64
+  - 64
+
+decoder_channels:  # list of kernels in decoder
+  - 64
+  - 64
+  - 64
+  - 32
+  - 32
+
+# list of selected goal and waypoints as timestep idx, e.g. 14 means the 14th future timestep is used as a waypoint,
+# last element is goal timestep
+waypoints:
+  - 14
+  - 29
+
+temperature: 1.8
+n_semantic_classes: 6
+
+loss_scale: 1000  # factor to scale the loss
+
+kernlen: 31  # (image) size of Gaussian kernel used for ground-truth Gaussian heatmap
+nsig: 4  # sigma of Gaussian kernel used for ground-truth Gaussian heatmap
+
+use_features_only: False  # If True the segmentation model only uses the
+e_unfreeze: 150  # Unfreeze semantic segmentation model weights after this # of epochs
+
+# TTST
+use_TTST: False
+rel_threshold: 0.002
+
+# CWS
+use_CWS: False
+CWS_params: None
+
+# Trajectory
+obs_len: 5  # in timesteps
+pred_len: 30  # in timesteps
+n_goal: 20  # K_e
+n_traj: 1  # K_a
+
+# Data
+use_raw_data: True
+data_dir: data/
+dataset_name: sdd 

@@ -1,0 +1,11 @@
+tqdm==4.48.0
+pyyaml==5.3.1
+matplotlib==3.2.2
+pandas==1.4.2
+opencv-python==4.4.0.42
+scipy==1.5.0
+segmentation_models_pytorch==0.1.0
+notebook
+tensorboard
+seaborn==0.11.2
+loralib==0.1.1
