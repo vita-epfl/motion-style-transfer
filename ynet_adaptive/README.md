@@ -5,7 +5,7 @@
 
 This is an implementation of the paper
 
-**Motion Style Transfer: Modular Low-Rank Adaptation for Deep Motion Forecasting**
+**Modular Low-Rank Style Transfer for Deep Motion Forecasting**
 <br>
 <a href="https://thedebugger811.github.io">Parth Kothari*</a>, 
 <a href="https://people.epfl.ch/danya.li/?lang=en">Danya Li*</a>, 
