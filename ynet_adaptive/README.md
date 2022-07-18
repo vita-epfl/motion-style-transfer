@@ -21,7 +21,7 @@ This is an implementation of the paper
 
 We propose efficient adaptation of deep motion forecasting models pretrained in one domain with sufficient data to new styles with *limited samples* through the following designs: 
 
-* a low-rank motion style adapter, which projects and adapts 10 the style features at a low-dimensional bottleneck
+* a low-rank motion style adapter, which projects and adapts the style features at a low-dimensional bottleneck
 
 * a modular adapter strategy, which disentangles the features of scene context and motion history to facilitate a fine-grained choice of adaptation layers
 
