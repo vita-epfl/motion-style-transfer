@@ -1,9 +1,8 @@
 # Motion Style Transfer
 
+Short Version (*Accepted to ICML Workshop "Safe Learning for Autonomous Driving"*)
 
 **[`Paper`](link) | [`Video`](link) | [`Poster`](link)**
-
-This is an implementation of the paper
 
 **Modular Low-Rank Style Transfer for Deep Motion Forecasting**
 <br>
@@ -14,7 +13,13 @@ This is an implementation of the paper
 <br>
 École Polytechnique Fédérale de Lausanne (EPFL)
 
-*Under Review*
+
+Long Version (*Under Review*)
+
+**Motion Style Transfer: Modular Low-Rank Adaptation for Deep Motion Forecasting**
+
+
+
 
 
 ## Overview
