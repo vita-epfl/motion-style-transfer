@@ -13,7 +13,7 @@ mv data/inD-dataset-v1.0/images/30_background.png data/inD-dataset-v1.0/images/s
 # Construct long-term data 
 python -m utils.inD_dataset
 
-# Experiment: inD ped to ped 
+# Experiment: inD ped to ped, from scenes=2,3,4 to scenes=1 
 python -m utils.inD_dataset --reload --labels pedestrian --selected_scenes scene1 --filter_data_dir data/inD-dataset-v1.0/filter/longterm 
 python -m utils.inD_dataset --reload --labels pedestrian --selected_scenes scene2 scene3 scene4 --filter_data_dir data/inD-dataset-v1.0/filter/longterm 
 
@@ -23,6 +23,22 @@ rm -r data/inD-dataset-v1.0/filter/longterm/agent_type/scene2 data/inD-dataset-v
 python -m utils.split_dataset --data_dir data/inD-dataset-v1.0/filter/longterm/agent_type/scene1 --data_filename pedestrian.pkl --val_split 20 --test_split 114 --seed 1 
 
 python -m utils.split_dataset --data_dir data/inD-dataset-v1.0/filter/longterm/agent_type/scene234 --data_filename pedestrian.pkl --val_split 0.1 --test_split 0.2 --seed 1 
+
+# Experiment: inD ped to ped, other scene combinations 
+python -m utils.inD_dataset --reload --labels pedestrian --selected_scenes scene1 scene2 scene4 --filter_data_dir data/inD-dataset-v1.0/filter/longterm
+python -m utils.inD_dataset --reload --labels pedestrian --selected_scenes scene1 scene3 scene4 --filter_data_dir data/inD-dataset-v1.0/filter/longterm 
+
+mv data/inD-dataset-v1.0/filter/longterm/agent_type/scene1__scene2__scene4 data/inD-dataset-v1.0/filter/longterm/agent_type/scene124
+mv data/inD-dataset-v1.0/filter/longterm/agent_type/scene1__scene3__scene4 data/inD-dataset-v1.0/filter/longterm/agent_type/scene134
+
+python -m utils.split_dataset --data_dir data/inD-dataset-v1.0/filter/longterm/agent_type/scene2 --data_filename pedestrian.pkl --val_split 80 --test_split 252 --seed 1 
+
+python -m utils.split_dataset --data_dir data/inD-dataset-v1.0/filter/longterm/agent_type/scene3 --data_filename pedestrian.pkl --val_split 80 --test_split 750 --seed 1 
+
+python -m utils.split_dataset --data_dir data/inD-dataset-v1.0/filter/longterm/agent_type/scene134 --data_filename pedestrian.pkl --val_split 0.1 --test_split 0.2 --seed 1 
+
+python -m utils.split_dataset --data_dir data/inD-dataset-v1.0/filter/longterm/agent_type/scene124 --data_filename pedestrian.pkl --val_split 0.1 --test_split 0.2 --seed 1 
+
 
 
 # Construct short-term data 
