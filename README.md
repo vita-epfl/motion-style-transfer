@@ -14,7 +14,7 @@ Short Version (*Accepted to ICML Workshop "Safe Learning for Autonomous Driving"
 École Polytechnique Fédérale de Lausanne (EPFL)
 
 
-Long Version (*Under Review*)
+Long Version (*Accepted to CoRL 2022*)
 
 **Motion Style Transfer: Modular Low-Rank Adaptation for Deep Motion Forecasting**
 
@@ -101,9 +101,9 @@ The above experiments correpond to scripts as follows:
 | Experiment | Script folder | 
 |------------|---------------|
 | Motion Style Transfer across Agents | `scripts/sdd/ped_to_biker/` | 
-| Motion Style Transfer across Scenes | `scripts/inD/ped_to_ped/ynet/` | 
+| Motion Style Transfer across Scenes | `scripts/inD/ped2ped_scene234to1/ynet/` | 
 | Modular Style Adapter (Agent motion) | `scripts/inD/scene1_car_to_truck/` | 
-| Modular Style Adapter (Scene) | `scripts/inD/ped_to_ped/ynetmod/` | 
+| Modular Style Adapter (Scene) | `scripts/inD/ped2ped_scene234to1/ynetmod/` | 
 | Modular Style Adapter (Agent motion) | `scripts/sdd/biker_low_to_high/` |
 
 In each folder, scripts for pretraininng, generalizing, baseline fine-tuning, and MoSA fine-tuning are provided. 
