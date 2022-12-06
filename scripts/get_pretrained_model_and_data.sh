@@ -12,3 +12,9 @@ unzip data_checkpoints_SDD_inD_L5/ckpts.zip
 
 # Remove 
 rm -r data_checkpoints_SDD_inD_L5/
+
+# Create shortterm folder (ignore longterm folder)
+cd data/sdd/filter
+mkdir shortterm
+mv agent_type/ avg_vel/ shortterm
+cd ../../../
